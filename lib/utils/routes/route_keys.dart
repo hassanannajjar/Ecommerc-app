@@ -1,5 +1,5 @@
 const String routeSplash = '/splash';
-const String routeHome = '/';
+const String routeHome = '/home';
 const String routeWelcome = '/welcome';
 const String routeAuthentication = '/authentication';
 const String routeCompletedOrder = '/completed_order';
