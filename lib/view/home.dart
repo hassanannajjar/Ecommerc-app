@@ -1,7 +1,9 @@
 import 'package:dynamic_tabbar/dynamic_tabbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:provider/provider.dart';
 
+import '../provider/splash_provider.dart';
 import '../utils/assets.dart';
 import '../utils/routes/route_keys.dart';
 
@@ -14,7 +16,11 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.menu),
-          onPressed: () {},
+          onPressed: () {
+            context.read<SplashProvider>().localStorage!.clear();
+            context.read<SplashProvider>().firstName = '';
+            Navigator.pushReplacementNamed(context, routeWelcome);
+          },
         ),
         actions: [
           IconButton(
@@ -27,14 +33,14 @@ class Home extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Padding(
-              padding: EdgeInsets.only(
+            Padding(
+              padding: const EdgeInsets.only(
                 left: 20,
                 right: 150,
               ),
               child: Text(
-                'Hello Tony, What fruit salad combo do you want today?',
-                style: TextStyle(
+                'Hello ${context.watch<SplashProvider>().firstName}, What fruit salad combo do you want today?',
+                style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w600,
                 ),

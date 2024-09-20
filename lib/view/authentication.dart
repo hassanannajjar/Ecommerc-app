@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../provider/authentication_provider.dart';
 import '../utils/assets.dart';
 import '../utils/routes/route_keys.dart';
 
@@ -40,6 +42,8 @@ class Authentication extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: TextFormField(
+                onChanged: (value) =>
+                    context.read<AuthenticationProvider>().setFirstName(value),
                 decoration: const InputDecoration(
                   filled: true,
                   fillColor: Color(0xffF3F1F1),
@@ -61,6 +65,7 @@ class Authentication extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
+                context.read<AuthenticationProvider>().setValueToNamed();
                 Navigator.pushReplacementNamed(context, routeHome);
               },
               style: ElevatedButton.styleFrom(

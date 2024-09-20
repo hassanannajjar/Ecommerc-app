@@ -1,9 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../provider/splash_provider.dart';
 import '../utils/assets.dart';
-import '../utils/routes/route_keys.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
@@ -15,9 +16,15 @@ class Splash extends StatefulWidget {
 class _SplashState extends State<Splash> {
   @override
   void initState() {
+    final SplashProvider splashProvider = context.read<SplashProvider>();
+
+    splashProvider.init();
     Timer(
       const Duration(seconds: 2),
-      () => Navigator.pushReplacementNamed(context, routeWelcome),
+      () => Navigator.pushReplacementNamed(
+        context,
+        splashProvider.getNextUserRoute(),
+      ),
     );
     super.initState();
   }

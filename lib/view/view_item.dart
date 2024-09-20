@@ -43,159 +43,163 @@ class ViewItem extends StatelessWidget {
                       fontStyle: FontStyle.italic,
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(15),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    InkWell(
-                                      onTap: () {},
-                                      borderRadius: BorderRadius.circular(20),
-                                      child: Ink(
-                                        height: 30,
-                                        width: 30,
-                                        decoration: BoxDecoration(
-                                          color: Colors.grey[300],
-                                          borderRadius:
-                                              BorderRadius.circular(20),
-                                        ),
-                                        child: const Center(
-                                          child: Icon(
-                                            Icons.remove,
-                                            color: Colors.black,
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.all(15),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      InkWell(
+                                        onTap: () {},
+                                        borderRadius: BorderRadius.circular(20),
+                                        child: Ink(
+                                          height: 30,
+                                          width: 30,
+                                          decoration: BoxDecoration(
+                                            color: Colors.grey[300],
+                                            borderRadius:
+                                                BorderRadius.circular(20),
+                                          ),
+                                          child: const Center(
+                                            child: Icon(
+                                              Icons.remove,
+                                              color: Colors.black,
+                                            ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                    const Padding(
-                                      padding:
-                                          EdgeInsets.symmetric(horizontal: 10),
-                                      child: Text(
-                                        '2',
-                                        style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold,
+                                      const Padding(
+                                        padding: EdgeInsets.symmetric(
+                                            horizontal: 10),
+                                        child: Text(
+                                          '2',
+                                          style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    InkWell(
-                                      onTap: () {},
-                                      borderRadius: BorderRadius.circular(20),
-                                      child: Ink(
-                                        height: 30,
-                                        width: 30,
-                                        decoration: BoxDecoration(
-                                          color: Colors.orange,
-                                          borderRadius:
-                                              BorderRadius.circular(20),
-                                        ),
-                                        child: const Center(
-                                          child: Icon(
-                                            Icons.add,
+                                      InkWell(
+                                        onTap: () {},
+                                        borderRadius: BorderRadius.circular(20),
+                                        child: Ink(
+                                          height: 30,
+                                          width: 30,
+                                          decoration: BoxDecoration(
                                             color: Colors.orange,
+                                            borderRadius:
+                                                BorderRadius.circular(20),
+                                          ),
+                                          child: const Center(
+                                            child: Icon(
+                                              Icons.add,
+                                              color: Colors.orange,
+                                            ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                  ],
-                                ),
-                                const Row(
-                                  children: [
-                                    Text('Price: '),
-                                    Text('N500'),
-                                  ],
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              height: 20,
-                            ),
-                            const Divider(
-                              height: 0.5,
-                            ),
-                            const SizedBox(
-                              height: 40,
-                            ),
-                            const Text(
-                              'One Pack Contains:',
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w300,
-                                decoration: TextDecoration.underline,
-                                decorationColor: Colors.orange,
-                                decorationStyle: TextDecorationStyle.solid,
-                                decorationThickness: 3,
+                                    ],
+                                  ),
+                                  const Row(
+                                    children: [
+                                      Text('Price: '),
+                                      Text('N500'),
+                                    ],
+                                  ),
+                                ],
                               ),
-                            ),
-                            const SizedBox(
-                              height: 20,
-                            ),
-                            const Text(
-                              'Red Quinoa, Lime, Honey, Blueberries, Strawberries, Mango, Fresh mint.',
-                              style: TextStyle(
-                                fontSize: 16,
+                              const SizedBox(
+                                height: 20,
                               ),
-                            ),
-                            const SizedBox(
-                              height: 20,
-                            ),
-                            const Divider(
-                              height: 0.5,
-                            ),
-                            const SizedBox(
-                              height: 20,
-                            ),
-                            const Text(
-                              'If you are looking for a new fruit salad to eat today, quinoa is the perfect brunch for you. make',
-                              style: TextStyle(
-                                fontSize: 14,
+                              const Divider(
+                                height: 0.5,
                               ),
-                            ),
-                            const SizedBox(
-                              height: 20,
-                            ),
-                          ],
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            IconButton(
-                              onPressed: () {},
-                              icon: const Icon(
-                                Icons.favorite_outline,
-                                color: Colors.orange,
+                              const SizedBox(
+                                height: 40,
                               ),
-                            ),
-                            ElevatedButton(
-                              onPressed: () {},
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.orange,
-                                minimumSize: Size(
-                                    MediaQuery.sizeOf(context).width * 0.6, 56),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                              ),
-                              child: const Text(
-                                'Add to basket',
+                              const Text(
+                                'One Pack Contains:',
                                 style: TextStyle(
                                   fontSize: 20,
-                                  color: Colors.white,
+                                  fontWeight: FontWeight.w300,
+                                  decoration: TextDecoration.underline,
+                                  decorationColor: Colors.orange,
+                                  decorationStyle: TextDecorationStyle.solid,
+                                  decorationThickness: 3,
                                 ),
                               ),
-                            )
-                          ],
-                        ),
-                      ],
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              const Text(
+                                'Red Quinoa, Lime, Honey, Blueberries, Strawberries, Mango, Fresh mint.',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              const Divider(
+                                height: 0.5,
+                              ),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              const Text(
+                                'If you are looking for a new fruit salad to eat today, quinoa is the perfect brunch for you. make',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              IconButton(
+                                onPressed: () {},
+                                icon: const Icon(
+                                  Icons.favorite_outline,
+                                  color: Colors.orange,
+                                ),
+                              ),
+                              ElevatedButton(
+                                onPressed: () {},
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.orange,
+                                  minimumSize: Size(
+                                      MediaQuery.sizeOf(context).width * 0.6,
+                                      56),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                ),
+                                child: const Text(
+                                  'Add to basket',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   )
                 ],

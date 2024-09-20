@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'provider/authentication_provider.dart';
+import 'provider/splash_provider.dart';
 import 'utils/routes/route_keys.dart';
 import 'view/authentication.dart';
 import 'view/completed_order.dart';
@@ -22,7 +23,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => AuthenticationProvider()),
+        ChangeNotifierProvider(
+          create: (context) => SplashProvider(context),
+        ),
+        ChangeNotifierProvider(
+            create: (context) => AuthenticationProvider(context)),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
